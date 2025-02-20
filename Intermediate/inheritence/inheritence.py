@@ -19,9 +19,9 @@ class Dog(Animal) :
 
 
     def speaks(self):
-        return "Woof !"
+        parent = super().speaks()
+        return f"{parent} and Woof !!"
     
 
 dog=Dog("Buddy")
-print(f"{dog.name} says {dog.speaks()}")
-print(f"{dog.name} says {super.self.speaks()}")
+print(dog.speaks())
